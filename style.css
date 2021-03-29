@@ -1,5 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 body {
   font-family: arial, sans-serif;
+  overflow: hidden;
+  background-color: #121212;
+  font-family: "Montserrat", sans-serif;
 }
 
 .content {
@@ -7,6 +11,8 @@ body {
 }
 .heading {
   text-align: center;
+  font-size: 2rem;
+  color: #fff;
 }
 
 .wrapper {
@@ -70,4 +76,32 @@ body {
 }
 .box:nth-of-type(5) {
   background: #552f2f;
+}
+
+.hovering_effect {
+  display: inline-block;
+  border: 0;
+  width: 240px;
+  height: 240px;
+  position: relative;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1);
+  transition: all 200ms ease-in;
+  transform: scale(1);
+}
+.hovering_effect:hover {
+  box-shadow: 0px 0px 150px #5e5d5d;
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.5);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.5);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.5);
+  transition: all 200ms ease-in;
+  transform: scale(1.5);
 }

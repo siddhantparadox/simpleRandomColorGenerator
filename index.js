@@ -1,59 +1,76 @@
-// for (i=0; i<5; i++){
-//     document.querySelectorAll(".box")[i].addEventListener("click", randomColor)
+// // for (i=0; i<5; i++){
+// //     document.querySelectorAll(".box")[i].addEventListener("click", randomColor)
+// // }
+
+//OLD CODE----------------
+// //firstColor
+// document.querySelector("#h").addEventListener("click", randomFirstColor)
+// function randomFirstColor(){
+//     const r= Math.floor(Math.random()*256)
+//     const g= Math.floor(Math.random()*256)
+//     const b= Math.floor(Math.random()*256)
+//     const newFirstColor= `rgb(${r}, ${g}, ${b})`
+//     document.getElementById("h").style.backgroundColor=newFirstColor
+//     document.getElementById("h").innerText=newFirstColor
 // }
 
+// //SecondColor
+// document.querySelector("#e").addEventListener("click", randomSecondColor)
+// function randomSecondColor(){
+//     const r= Math.floor(Math.random()*256)
+//     const g= Math.floor(Math.random()*256)
+//     const b= Math.floor(Math.random()*256)
+//     const newSecondColor= `rgb(${r}, ${g}, ${b})`
+//     document.getElementById("e").style.backgroundColor=newSecondColor
+//     document.getElementById("e").innerText=newSecondColor
+// }
 
-//firstColor
-document.querySelector("#h").addEventListener("click", randomFirstColor)
-function randomFirstColor(){
-    const r= Math.floor(Math.random()*256)
-    const g= Math.floor(Math.random()*256)
-    const b= Math.floor(Math.random()*256)
-    const newFirstColor= `rgb(${r}, ${g}, ${b})`
-    document.getElementById("h").style.backgroundColor=newFirstColor
-    document.getElementById("h").innerText=newFirstColor
-}
+// //ThirdColor
+// document.querySelector("#l").addEventListener("click", randomThirdColor)
+// function randomThirdColor(){
+//     const r= Math.floor(Math.random()*256)
+//     const g= Math.floor(Math.random()*256)
+//     const b= Math.floor(Math.random()*256)
+//     const newThirdColor= `rgb(${r}, ${g}, ${b})`
+//     document.getElementById("l").style.backgroundColor=newThirdColor
+//     document.getElementById("l").innerText=newThirdColor
+// }
 
-//SecondColor
-document.querySelector("#e").addEventListener("click", randomSecondColor)
-function randomSecondColor(){
-    const r= Math.floor(Math.random()*256)
-    const g= Math.floor(Math.random()*256)
-    const b= Math.floor(Math.random()*256)
-    const newSecondColor= `rgb(${r}, ${g}, ${b})`
-    document.getElementById("e").style.backgroundColor=newSecondColor
-    document.getElementById("e").innerText=newSecondColor
-}
+// //FourthColor
+// document.querySelector("#l2").addEventListener("click", randomFourthColor)
+// function randomFourthColor(){
+//     const r= Math.floor(Math.random()*256)
+//     const g= Math.floor(Math.random()*256)
+//     const b= Math.floor(Math.random()*256)
+//     const newFourthColor= `rgb(${r}, ${g}, ${b})`
+//     document.getElementById("l2").style.backgroundColor=newFourthColor
+//     document.getElementById("l2").innerText=newFourthColor
+// }
 
-//ThirdColor
-document.querySelector("#l").addEventListener("click", randomThirdColor)
-function randomThirdColor(){
-    const r= Math.floor(Math.random()*256)
-    const g= Math.floor(Math.random()*256)
-    const b= Math.floor(Math.random()*256)
-    const newThirdColor= `rgb(${r}, ${g}, ${b})`
-    document.getElementById("l").style.backgroundColor=newThirdColor
-    document.getElementById("l").innerText=newThirdColor
-}
+// //FifthColor
+// document.querySelector("#o").addEventListener("click", randomFifthColor)
+// function randomFifthColor(){
+//     const r= Math.floor(Math.random()*256)
+//     const g= Math.floor(Math.random()*256)
+//     const b= Math.floor(Math.random()*256)
+//     const newFifthColor= `rgb(${r}, ${g}, ${b})`
+//     document.getElementById("o").style.backgroundColor=newFifthColor
+//     document.getElementById("o").innerText=newFifthColor
+// }
+//-----------------------------OLD CODE
 
-//FourthColor
-document.querySelector("#l2").addEventListener("click", randomFourthColor)
-function randomFourthColor(){
-    const r= Math.floor(Math.random()*256)
-    const g= Math.floor(Math.random()*256)
-    const b= Math.floor(Math.random()*256)
-    const newFourthColor= `rgb(${r}, ${g}, ${b})`
-    document.getElementById("l2").style.backgroundColor=newFourthColor
-    document.getElementById("l2").innerText=newFourthColor
-}
+function randomColor(){
+        const r= Math.floor(Math.random()*256)
+        const g= Math.floor(Math.random()*256)
+        const b= Math.floor(Math.random()*256)
+        return `rgb(${r}, ${g}, ${b})`
+    }
 
-//FifthColor
-document.querySelector("#o").addEventListener("click", randomFifthColor)
-function randomFifthColor(){
-    const r= Math.floor(Math.random()*256)
-    const g= Math.floor(Math.random()*256)
-    const b= Math.floor(Math.random()*256)
-    const newFifthColor= `rgb(${r}, ${g}, ${b})`
-    document.getElementById("o").style.backgroundColor=newFifthColor
-    document.getElementById("o").innerText=newFifthColor
+const clicks = document.querySelectorAll('div div div')
+
+for (let click of clicks){
+    click.addEventListener('dblclick', function(){
+        click.style.backgroundColor = randomColor()
+        click.innerHTML=randomColor()
+    })
 }
